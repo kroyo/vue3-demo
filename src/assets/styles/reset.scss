@@ -1,0 +1,67 @@
+/**
+ * /*
+ *
+ * @format
+ * @Description: 浏览器初始化默认样式
+ * @Author: zhongliehao
+ * @LastEditor: zhongliehao
+ * @Date: 2022-07-26 16:47:24
+ * @LastEditTime: 2022-07-29 20:21:50
+ */
+
+ html {
+  font-family:
+    PingFangSC-Regular,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Helvetica Neue',
+    Helvetica,
+    Arial,
+    'Hiragino Sans GB',
+    'Microsoft Yahei',
+    sans-serif;
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li,
+p {
+  padding: 0;
+  list-style: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(112, 112, 112, 0.1);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(112, 112, 112, 0.5);
+  border-radius: 8px;
+}
