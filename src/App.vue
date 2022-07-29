@@ -18,8 +18,10 @@
 </template>
 
 <script setup>
-import { useRouter, useRoute } from "vue-router";
-import { slider } from './config/index'
+import { useRouter, useRoute } from 'vue-router'
+import routes from './router'
+
+const slider = routes.filter(route => route.isSlider && route.name)
 
 // 路由方法
 const router = useRouter();

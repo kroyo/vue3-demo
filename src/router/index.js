@@ -1,8 +1,7 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
-
 const routes = [ 
   {
     path: '/',
+    isSlider: false,
     redirect(to) {
       return '/home'
     }
@@ -10,18 +9,21 @@ const routes = [
   {
     name: 'home',
     path: '/home',
-    component: () => import(/* webpackChunkName: "home" */ '@/views/home.vue') 
+    isSlider: true,
+    component: () => import('@/views/home.vue') 
   },
   {
     name: 'setup',
     path: '/setup',
-    component: () => import(/* webpackChunkName: "home" */ '@/views/api-example/setup.vue') 
+    isSlider: true,
+    component: () => import('@/views/api-example/setup.vue') 
+  },
+  {
+    name: 'reactiveRef',
+    path: '/reactiveRef',
+    isSlider: true,
+    component: () => import('@/views/api-example/reactive-and-ref.vue') 
   }
 ]
 
-const router = createRouter({
-  history: createWebHashHistory(),
-  routes
-})
-
-export default router
+export default routes
