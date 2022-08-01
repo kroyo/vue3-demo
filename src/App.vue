@@ -42,7 +42,7 @@ const isActive = ({ name }) => {
 <style lang="scss" scoped>
 .slider {
   position: relative;
-  width: 120px;
+  width: 150px;
   min-height: 100vh;
   padding: 1rem 0;
   text-align: center;
@@ -59,8 +59,8 @@ const isActive = ({ name }) => {
   }
   &-item {
     position: relative;
-    height: 36px;
-    line-height: 36px;
+    height: 42px;
+    line-height: 42px;
     font-size: 16px;
     font-weight: 500;
     color: #333;
