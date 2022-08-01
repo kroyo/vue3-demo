@@ -34,7 +34,16 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 ### 9.toRaw
 - 获取 ref 或 reactive 对象的原始数据的
+- 修改原始值，视图不会自动更新
 
+### 10.markRaw
+- 将原始数据标记为非响应式的, 
+- 即使用 ref 或 reactive 将其包装，仍无法实现数据响应式，其接收一个参数，即原始数据，并返回被标记后的数据
+
+### 11.provide && inject
+与Vue2中的 provide 和 inject 作用相同
+- provide ：向子组件以及子孙组件传递数据。接收两个参数，第一个参数是 key，即数据的名称；第二个参数为 value，即数据的值
+- inject ：接收父组件或祖先组件传递过来的数据。接收一个参数 key，即父组件或祖先组件传递的数据名称
 
 ## 学习vue3资料
 https://juejin.cn/post/6897030228867022856  

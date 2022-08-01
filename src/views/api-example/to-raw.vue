@@ -1,12 +1,12 @@
 <template>
-  <div>a: {{ state.a }}</div>
-  <div>b: {{ state.first.b }}</div>
-  <div>c: {{ state.first.second.c }}</div>
-  <button @click="changeFirst">重新赋值</button><br />
-  <button @click="changeSecond">直接修改数据</button>
+  <div>{{ state.name }}</div>
+  <div>{{ state.age }}</div>
+  <div>obj === raw: {{ isEqual }}</div>
+  <button @click="change">改变原始值</button>
 </template>
 
 <script>
+// 获取 ref 或 reactive 对象的原始数据
 import { reactive, toRaw } from 'vue'
 export default {
   setup() {
@@ -17,8 +17,16 @@ export default {
 
     const state = reactive(obj)
     const raw = toRaw(state)
+    let isEqual = obj === raw
 
-    console.log(obj === raw) // true
+    const change = () => {
+      obj.age = 26
+      console.log(state)
+    }
+
+    console.log(isEqual) // true
+
+    return { state, isEqual, change }
   }
 };
 </script>

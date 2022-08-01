@@ -41,6 +41,18 @@ const routes = [
     path: '/shallowRef',
     isSlider: true,
     component: () => import('@/views/api-example/shallow-ref.vue') 
+  },
+  {
+    name: 'toRaw',
+    path: '/toRaw',
+    isSlider: true,
+    component: () => import('@/views/api-example/to-raw.vue') 
+  },
+  {
+    name: 'markRaw',
+    path: '/markRaw',
+    isSlider: true,
+    component: () => import('@/views/api-example/mark-raw.vue') 
   }
 ]
 
