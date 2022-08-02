@@ -53,6 +53,24 @@ const routes = [
     path: '/markRaw',
     isSlider: true,
     component: () => import('@/views/api-example/mark-raw.vue') 
+  },
+  {
+    name: 'watch',
+    path: '/watch',
+    isSlider: true,
+    component: () => import('@/views/api-example/watch.vue') 
+  },
+  {
+    name: 'getCurrentInstance',
+    path: '/getCurrentInstance',
+    isSlider: true,
+    component: () => import('@/views/api-example/getCurrentInstance.vue') 
+  },
+  {
+    name: '获取标签元素',
+    path: '/refs',
+    isSlider: true,
+    component: () => import('@/views/api-example/refs.vue') 
   }
 ]
 

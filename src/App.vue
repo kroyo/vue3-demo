@@ -64,7 +64,7 @@ const isActive = ({ name }) => {
     font-size: 16px;
     font-weight: 500;
     color: #333;
-    padding: 0 20px;
+    // padding: 0 20px;
     transition: border-color 0.3s, background 0.3s,
       padding 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
     &:after {
