@@ -71,6 +71,12 @@ const routes = [
     path: '/refs',
     isSlider: true,
     component: () => import('@/views/api-example/refs.vue') 
+  },
+  {
+    name: 'TodoList',
+    path: '/todoList',
+    isSlider: true,
+    component: () => import('@/views/todo-list/index.vue') 
   }
 ]
 

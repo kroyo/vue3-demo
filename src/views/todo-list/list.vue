@@ -1,24 +1,21 @@
 <template>
-  <div>
-    <todo-list-item v-for="(item, key) in todos" :key="key"></todo-list-item>
-  </div>
+  <todo-list-item
+    v-for="(item, key) in todoList"
+    :todo-item="item"
+    :key="key"
+    @delete-item="$event => this.$emit('delete-item', $event)">
+  </todo-list-item>
 </template>
 
 <script>
-import { toRef } from 'vue'
 import TodoListItem from './list-item.vue'
 export default {
   name: 'TodoList',
-  setup(props, context) {
-    console.log(props, context)
-    const { todos } = toRef(props, 'todos')
-
-    // methods
-    const deleteItem = () => {
-
-    }
-
-    return { todos, deleteItem }
+  components: {
+    TodoListItem
+  },
+  props: {
+    todoList: Array
   }
 }
 </script>
