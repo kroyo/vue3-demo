@@ -1,0 +1,1 @@
+import{_ as r,r as s,l as c,o,c as a,t as u}from"./index.03db0594.js";const l={setup(){const n=s(3),t=c();return console.log(t),{num:n}}};function p(n,t,_,e,f,i){return o(),a("p",null,"getCurrentInstance "+u(e.num),1)}const g=r(l,[["render",p]]);export{g as default};
