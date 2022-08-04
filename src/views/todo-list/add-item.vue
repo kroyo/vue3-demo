@@ -15,7 +15,11 @@ export default {
     const itemTitle = ref('')
     // methods
     const emitAddItem = () => {
-      context.emit('add-item', itemTitle)
+      if (!itemTitle.value.trim()) {
+        return alert('请填写明确任务!')
+      }
+      context.emit('add-item', itemTitle.value)
+      itemTitle.value = ''
     }
 
     return { itemTitle, emitAddItem }

@@ -1,6 +1,9 @@
 <template>
-  <div class="todo-item mb10">
-    <div class="todo-item-title tl">{{ todoItem.title }}</div>
+  <div class="todo-item mb10" :class="{ checked: todoItem.checked }">
+    <label class="todo-item-title tl">
+      <input class="todo-item-checkbox mr10" v-model="todoItem.checked" type="checkbox" @click="changeCheck" />
+      {{ todoItem.title }}
+    </label>
     <button class="todo-item-btn text" @click="deleteItem(todoItem)">删除</button>
   </div>
 </template>
@@ -18,12 +21,17 @@ export default {
   setup(props, context) {
     console.log('>>>listItem')
     console.log(props, context)
+    const { todoItem } = toRefs(props)
     // methods
+    const changeCheck = () => {
+      console.log('>>>listItem', todoItem.value) 
+      context.emit('change-check', todoItem.value)
+    }
     const deleteItem = (todoItem) => {
       context.emit('delete-item', todoItem.id)
     }
 
-    return { deleteItem }
+    return { changeCheck, deleteItem }
   }
 }
 </script>
@@ -38,8 +46,21 @@ export default {
   background-color: var(--ant-primary-1);
   border-radius: 6px;
   &-title {
+    display: flex;
     width: calc(100% - 70px);
     line-height: 32px;
+    align-items: center;
+    cursor: pointer;
+  }
+  &-checkbox {
+    width: 18px;
+    height: 18px;
+  }
+  &.checked {
+    .todo-item-title {
+      text-decoration: line-through;
+      font-style: italic;
+    }
   }
   &-btn {
     color: #fff;
